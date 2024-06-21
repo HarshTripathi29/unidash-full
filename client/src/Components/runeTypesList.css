@@ -1,0 +1,198 @@
+.table-container {
+  width: calc(100% - 40px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  margin: 5px 20px;
+  padding: 10px 20px;
+  overflow-x: hidden;
+}
+
+.styled-table {
+  width: 100%;
+  padding: 10px;
+  border-collapse: collapse;
+  border-bottom: 1px solid black;
+  min-width: 600px;
+ 
+}
+
+tbody {
+  display: block;
+  height: 470px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 10px;
+  text-align: left;
+  color: rgb(9, 9, 9);
+  white-space: nowrap;
+  overflow: hidden;
+  border : 1px solid #121212;
+  text-overflow: ellipsis;
+}
+
+.styled-table th {
+  background-color: #000000;
+  color: white;
+}
+
+.styled-table tr {
+  background-color: rgba(255, 255, 255, 0.813);
+  overflow: hidden;
+}
+
+.styled-table tr:hover {
+  background-color: rgba(203, 203, 203, 0.799);
+}
+
+.styled-table td:first-child {
+  overflow: hidden;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.transparent-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.transparent-input::placeholder {
+  color: white;
+}
+
+.search-result-item {
+  cursor: pointer;
+}
+
+.reset-button {
+  padding: 8px 16px;
+  margin: 10px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.table-toggle {
+  padding: 0px;
+}
+
+.table-toggle button {
+  padding: 8px 15px;
+  margin: 10px 10px 10px 0px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.symbol-image {
+  width: 40px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.toggle-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.watchlist-link{
+  color : #121212;
+  cursor : pointer;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right : 170px;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    margin: 5px 10px;
+    padding: 5px;
+    overflow-x: auto;
+  }
+
+  .styled-table {
+    width: 100%;
+    padding: 5px;
+    min-width: 800px;
+  }
+
+  .styled-table th, .styled-table td {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+
+  .styled-table th:first-child, .styled-table td:first-child {
+    white-space: normal;
+    overflow: visible;
+    width: auto;
+  }
+
+  .styled-table th:not(:first-child), .styled-table td:not(:first-child) {
+    white-space: nowrap;
+  }
+
+  tbody {
+    height: 470px;
+  }
+  .watchlist-link{
+    
+    margin-right : 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .styled-table th, .styled-table td {
+    padding: 6px 3px;
+    font-size: 12px;
+  }
+
+  .styled-table th:first-child, .styled-table td:first-child {
+    white-space: normal;
+    overflow: hidden;
+    width: auto;
+  }
+
+  tbody {
+    height: 470px;
+  }
+
+  .transparent-input {
+    font-size: 14px;
+  }
+
+  .reset-button,
+  .table-toggle button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

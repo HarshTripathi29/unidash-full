@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%-20px);
+    height: 150vh;
+    align-items: right;
+    justify-content: flex-start;
+    background-color: white;
+    /* background: linear-gradient(to bottom, #5f5f5f,#121212, #000000); */
+  }
+  
+  .dashboard-heading {
+    font-size: 1.5em;
+    color: #0c0c0c;
+    margin: 5px 0px;
+  }
+  
+  .address-input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 2px solid #121212;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #3e3e3e;
+  }
+  
+  .address-input::placeholder {
+    color: #454545;
+  }
+  
+  .dashboard-subheading {
+    font-size: 1.2em;
+    color:#000000;
+    margin-bottom: 25px;
+  }
+
+  .navigation{
+    text-align: center;
+    /* border-top: 2px solid #121212;
+    padding : 20px; */
+  }
+
+  .watchlist-link{
+    color : #121212;
+    cursor : pointer;
+    text-decoration: none;
+    font-weight: 600;
+  }
