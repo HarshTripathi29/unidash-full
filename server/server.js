@@ -30,21 +30,21 @@ app.use('/api/v1/tokens', tokenRoutes);
 
 //-----------------------Deployment--------------
 
-const NODE_ENV = "production";
-const __dirname1 = path.resolve();
-if (NODE_ENV === "production") {
-  // Adjust the path to the client build folder
-  app.use(express.static(path.join(__dirname1, "../client/dist")));
+// const NODE_ENV = "production";
+// const __dirname1 = path.resolve();
+// if (NODE_ENV === "production") {
+//   // Adjust the path to the client build folder
+//   app.use(express.static(path.join(__dirname1, "../client/dist")));
 
-  // Catch-all handler for all other routes, sending back the index.html file
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname1, "../client/dist/index.html"));
-  });
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running successfully");
-  });
-}
+//   // Catch-all handler for all other routes, sending back the index.html file
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname1, "../client/dist/index.html"));
+//   });
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API is running successfully");
+//   });
+// }
 
 //-----------------------Deployment--------------
 
