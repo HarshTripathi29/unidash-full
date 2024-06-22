@@ -10,8 +10,8 @@ const path = require("path");
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173', 
-    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'], 
+    origin: 'https://unidash-full.onrender.com', 
+    methods: ['GET', 'POST', 'DELETE', 'OPTIONS'], 
     allowedHeaders: ['Content-Type', 'Authorization']
   }));
 
