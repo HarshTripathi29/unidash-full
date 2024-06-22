@@ -4,14 +4,13 @@ import axios from 'axios';
 import { fetchRunesTypes } from '../runes';
 import CircularProgress from '@mui/material/CircularProgress';
 import SearchBar from './SearchBar';
-import { useDispatch } from 'react-redux';
 import { addToWatchlist, removeFromWatchlist } from '../features/watchlistSlice';
 import MagicEdenTable from './MagicEdenTable';
-import Brc20Table from './Brc20Table';
 import './runeTypesList.css';
+import Brc20List from './Brc20List';
 
 const RuneTypesList = () => {
-  const dispatch = useDispatch();
+ 
   const [runeTypes, setRuneTypes] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
@@ -163,7 +162,9 @@ const RuneTypesList = () => {
         ) : selectedTable === 'magiceden' ? (
           <MagicEdenTable />
         ) : (
-          <Brc20Table />
+      <div>
+        <Brc20List/>
+      </div>
         )
       )}
     </div>
