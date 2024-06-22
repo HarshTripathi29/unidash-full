@@ -9,7 +9,7 @@ const tokenRoutes = require('./routes/tokens');
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: 'https://unidash-liard.vercel.app, 
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'], 
     allowedHeaders: ['Content-Type', 'Authorization']
   }));
