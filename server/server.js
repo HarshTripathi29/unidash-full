@@ -10,7 +10,7 @@ const path = require("path");
 
 const app = express();
 app.use(cors({
-    origin: 'https://unidash-full.onrender.com', 
+    origin: 'https://unidash-full.netlify.app', 
     methods: ['GET', 'POST', 'DELETE', 'OPTIONS'], 
     allowedHeaders: ['Content-Type', 'Authorization']
   }));
