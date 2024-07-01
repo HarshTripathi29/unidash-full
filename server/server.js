@@ -11,8 +11,7 @@ const brc20WatchlistRouter = require('./routes/brc20Watchlist');
 
 const app = express();
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
-const CLIENT_URL = NODE_ENV === 'production' ? 'https://unidash-full.onrender.com' : 'http://localhost:5173';
+const CLIENT_URL = 'https://unidash-full.onrender.com';
 
 app.use(cors({
   origin: CLIENT_URL,
